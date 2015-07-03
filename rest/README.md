@@ -33,7 +33,7 @@ To run the application:
       "message": "Hello World JSON!"
     }
 
-### 2. Testing /json endpoint with "Accept: application/xml" header parameters
+### 2. Testing /json endpoint with "Accept: application/xml" header parameter
 
 **Request:**
 
@@ -48,7 +48,7 @@ Should respond with a 406 error code.
     Content-Length: 0
     Date: <date>
 
-### 3. Testing /json endpoint with "Accept: application/json" header parameters
+### 3. Testing /json endpoint with "Accept: application/json" header parameter
 
 **Request:**
 
@@ -74,7 +74,7 @@ Should respond with a 406 error code.
       <message>Hello World XML!</message>
     </message>
  
-### 5. Testing /xml endpoint with "Accept: application/json" header parameters
+### 5. Testing /xml endpoint with "Accept: application/json" header parameter
 
 **Request:**
 
@@ -93,7 +93,7 @@ Should respond with a 406 error code.
       "path": "/xml"
     }
  
-### 6. Testing /xml endpoint with "Accept: application/xml" header parameters
+### 6. Testing /xml endpoint with "Accept: application/xml" header parameter
 
 **Request:**
 
@@ -119,7 +119,7 @@ Should respond with a 406 error code.
       "message": "Hello World!"
     } 
 
-### 8. Testing / endpoint with "Accept: application/json" header parameters
+### 8. Testing / endpoint with "Accept: application/json" header parameter
 
 **Request:**
 
@@ -132,7 +132,7 @@ Should respond with a 406 error code.
       "message": "Hello World!"
     }
  
-### 9. Testing / endpoint with "Accept: application/xml" header parameters
+### 9. Testing / endpoint with "Accept: application/xml" header parameter
 
 **Request:**
 
