@@ -11,6 +11,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
+ * This controller has three endpoints:
+ *
+ * - /json: returns only json objects.
+ * - /xml: returns only xml objects.
+ * - /: returns either json or xml depending on the Accept header.
+ *
  * @author Oreste Luci
  */
 @Controller
