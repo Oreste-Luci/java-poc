@@ -9,10 +9,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "message")
 public class ResponseMessage {
 
-    @XmlElement
     private String code;
 
-    @XmlElement
     private String message;
 
     public ResponseMessage() {
@@ -29,6 +27,7 @@ public class ResponseMessage {
         return code;
     }
 
+    @XmlElement
     public void setCode(String code) {
         this.code = code;
     }
@@ -37,6 +36,7 @@ public class ResponseMessage {
         return message;
     }
 
+    @XmlElement
     public void setMessage(String message) {
         this.message = message;
     }
