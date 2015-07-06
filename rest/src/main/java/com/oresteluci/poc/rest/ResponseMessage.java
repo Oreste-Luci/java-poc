@@ -6,19 +6,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 /**
  * @author Oreste Luci
  */
-@XmlRootElement(name = "message")
+@XmlRootElement(name = "response")
 public class ResponseMessage {
 
     private String code;
 
     private String message;
 
-    public ResponseMessage() {
-
-    }
+    public ResponseMessage() {}
 
     public ResponseMessage(String code, String message) {
-
         this.code = code;
         this.message = message;
     }
