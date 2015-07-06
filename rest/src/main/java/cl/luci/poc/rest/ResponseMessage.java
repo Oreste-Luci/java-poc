@@ -16,7 +16,6 @@ public class ResponseMessage {
     public ResponseMessage() {}
 
     public ResponseMessage(String code, String message) {
-
         this.code = code;
         this.message = message;
     }
