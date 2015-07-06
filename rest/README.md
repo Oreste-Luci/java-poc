@@ -69,10 +69,10 @@ Should respond with a 406 error code.
 
 **Response:**
 
-    <message>
+    <response>
       <code>xml-example</code>
       <message>Hello World XML!</message>
-    </message>
+    </response>
  
 ### 5. Testing /xml endpoint with "Accept: application/json" header parameter
 
@@ -101,10 +101,10 @@ Should respond with a 406 error code.
 
 **Response:**
 
-    <message>
+    <response>
       <code>xml-example</code>
       <message>Hello World XML!</message>
-    </message>
+    </response>
  
 ### 7. Testing / endpoint with no header parameters
 
@@ -140,8 +140,9 @@ Should respond with a 406 error code.
 
 **Response:**
 
-    <message>
-      <code>rest-example</code>
-      <message>Hello World!</message>
-    </message>
- 
+    <response>
+      <code>xml-example</code>
+      <message>Hello World XML!</message>
+    </response>
+
+> **NOTE:** Both commands used after the pipe `jq` and `xml` are commands to beautify the json and xml outputs. They might not be present in your system.
