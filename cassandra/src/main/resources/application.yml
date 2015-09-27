@@ -1,0 +1,5 @@
+spring:
+  data:
+    cassandra:
+      keyspace-name: cassandra_poc
+      contact-points: localhost
