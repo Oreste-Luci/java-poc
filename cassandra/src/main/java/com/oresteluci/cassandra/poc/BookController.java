@@ -2,10 +2,7 @@ package com.oresteluci.cassandra.poc;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,16 +17,16 @@ public class BookController {
     private BookRepository bookRepository;
 
     @RequestMapping(
-            value = "/add",
+            value = "/",
             method= RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE
     )
-    public void addBook(@RequestBody Book book) {
+    public void add(@RequestBody Book book) {
         bookRepository.save(book);
     }
 
     @RequestMapping(
-            value = "/books",
+            value = "/",
             method= RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
@@ -44,4 +41,23 @@ public class BookController {
 
         return response;
     }
+
+    @RequestMapping(
+            value = "/{isbn}",
+            method= RequestMethod.DELETE,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public void delete(@PathVariable String isbn) {
+        bookRepository.delete(isbn);
+    }
+
+    @RequestMapping(
+            value = "/{isbn}",
+            method= RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public Book get(@PathVariable String isbn) {
+        return bookRepository.findOne(isbn);
+    }
+
 }
